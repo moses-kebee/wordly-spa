@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordly - Dictionary SPA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📖 Wordly Dictionary</h1>
+            <p>Your interactive language learning companion</p>
+        </header>
+
+        <!-- Search Form -->
+        <form id="searchForm">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="wordInput" 
+                    placeholder="Enter a word (e.g., 'hello', 'example')"
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit" id="searchBtn">
+                    🔍 Search
+                </button>
+            </div>
+        </form>
+
+        <!-- Loading Indicator -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Fetching definition...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="error hidden"></div>
+
+        <!-- Results Container -->
+        <div id="results" class="results hidden">
+            <div class="word-header">
+                <h2 id="wordTitle"></h2>
+                <div id="pronunciation" class="pronunciation"></div>
+            </div>
+            
+            <div id="audioContainer" class="audio-container"></div>
+            
+            <div id="definitions" class="definitions"></div>
+            
+            <div id="synonyms" class="synonyms-section"></div>
+            
+            <div id="source" class="source"></div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Powered by Free Dictionary API | Wordly SPA</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
